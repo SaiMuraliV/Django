@@ -1,0 +1,13 @@
+{
+    "python.defaultInterpreterPath": "venv//Scripts//python.exe",
+    // "files.autoSave": "afterDelay",
+    // "files.autoSaveDelay": 1000,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName",
+    }
+}

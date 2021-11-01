@@ -1,0 +1,9 @@
+*{
+    text-align: center;
+    background-color: aqua;
+}
+
+img{
+    height: 300px;
+    border-radius: 50%;
+}
