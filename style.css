@@ -1,0 +1,14 @@
+body{
+    background-color: yellow;
+    text-align: center;
+}
+
+.page-header:hover{
+    color: red;
+    /* background-color: black; */
+    /* margin-top: 120px */
+}
+
+h1:hover{
+    color: blue;
+}
