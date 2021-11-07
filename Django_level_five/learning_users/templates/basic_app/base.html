@@ -28,13 +28,19 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="{% url 'index' %}" class="navbar-brand mb-0 h1">Brand</a></li>
-                    <li class="nav-item"><a href="{% url 'admin:index' %}" class="navbar-link m-1">Admin</a></li>
-                    <li class="nav-item"><a href="{% url 'basic_app:register' %}" class="navbar-link m-1">Register</a></li>
+                    <li class="nav-item"><a href="{% url 'index' %}" class="nav-brand text-uppercase mt-3 h3 text-decoration-none text-dark">Brand</a></li>
+                    <li class="nav-item"><a href="{% url 'admin:index' %}" class="nav-link">Admin</a></li>
+                    <li class="nav-item"><a href="{% url 'basic_app:register' %}" class="nav-link">Register</a></li>
+
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                        <li class="nav-item d-flex"><a class="nav-link" href="{% url 'basic_app:user_login' %}">Login</a></li>
+                    {% endif %}
                 </ul>
             </div>            
         </nav>
-        <div class="container">
+        <div class="container bg-dark p-5 mt-4 mb-4 rounded-3 text-white">
             {% block body_block %}
             {% endblock %}
         </div>

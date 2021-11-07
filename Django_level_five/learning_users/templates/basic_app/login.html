@@ -2,6 +2,16 @@
 {% extends "basic_app/base.html" %}
     {% block body_block %}
         <div class="jumbotron">
-            <h1>Django</h1> Level Five </h1>
+            <h1>Please Login</h1>
+            <form action="{% url 'basic_app:user_login' %}" method="POST">
+                {% csrf_token %}
+                <label for="username">username</label>
+                <input type="text" name="username" placeholder="@Username">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" password="Password">
+
+                <input type="submit" value="Login">
+            </form>
         </div>
     {% endblock %}
